@@ -8,6 +8,7 @@ page.bgcolor=ft.ColorsBLACK45
 
 perdonajes = [
 {
+}
    "titulo":"Katsuki Bakugo",
    "autor":"Korei Horikoshi",
    "edad":16-17,
@@ -133,6 +134,7 @@ def siguiente_click(e):
 
 
 ft.app(main)
+
 
 
 
