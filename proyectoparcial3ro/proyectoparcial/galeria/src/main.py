@@ -32,7 +32,7 @@ perdonajes = [
   "titulo":"Eyeless jack",
   "autor":"Azrael (Mundislander)",
   "edad":20,
-  "descripcion":"Ser humanoide con mascaras suele esconderse en la oscuridad y roba organos humanos como riñones a sus victimas.,
+  "descripcion":"Ser humanoide con mascaras suele esconderse en la oscuridad y roba organos humanos como riñones a sus victimas".,
   "imagen":"https://raw.githubusercontent.com/corderoplatadesireeodette-blip/proyecto-bimestral-1er-periodo/0c7f805393729c9dc664a989581126c7e7d776a4/eyeless%20jack.jpg"
 },
 {
@@ -111,17 +111,29 @@ def mostrar_personaje():
    page.update()
 
 def siguiente_click(e):
- indice_actual[0]=(indice_actual[0]+1%len(personajes))
+ indice_actual[0]=(indice_actual[0]+1%len(personajes)
    mostrar_personaje()
   boton_siguiente.on_click=siguiente_click
      
 
-  page.add()
-   
-  
+  page.add(
+   ft.Container(
+    content=ft.column([contenedor,
+                       boton_siguiente
+     
+    ],aligment=ft.MainAxisAligment.CENTER,)
+    horizontal_aligment=ft.CrossAxisAligment.CENTER,
+                       spacing=20
+   ),
+    aligment=ft.aligmen.center,
+    expand=True
+   )
+) 
+  mostrar_personaje()
 
 
 ft.app(main)
+
 
 
 
